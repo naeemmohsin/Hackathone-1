@@ -1,0 +1,114 @@
+/* style.css */
+body {
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0; /* Light background color */
+}
+
+.topContainer{
+    width: 90%;
+    max-width: 1200px;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    width: 90%;
+    max-width: 1200px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    border-radius: 8px; /* Rounded corners */
+    overflow: hidden; /* Prevents content from overflowing */
+}
+.Heading{
+    font-size: 30px;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.left-panel,
+.right-panel {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto; /* Scrollable content if needed */
+    height: 90vh; /* Set a maximum height to prevent content overflow */
+}
+
+.left-panel {
+    background-color: #e0e0e0;
+}
+
+.section {
+    margin-bottom: 20px;
+}
+
+h2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.edit-icon {
+    cursor: pointer;
+    color: #888;
+}
+
+.editable {
+    padding: 10px;
+    border: 1px dashed transparent; /* Initially transparent border */
+    transition: border-color 0.3s; /* Smooth border color transition */
+}
+
+.editable:hover {
+    border-color: #ccc; /* Border appears on hover */
+}
+
+/* Style for spans to make them look more like placeholders */
+span[contenteditable] {
+    display: inline-block;
+    padding: 4px 8px;
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 4px; /* Slightly rounded corners */
+    margin-right: 5px;
+    margin-bottom: 5px;
+    background-color: #f9f9f9; /* Very light gray background */
+    cursor: text; /* Indicate that it's editable */
+    min-width: 80px; /* Ensure spans have a minimum width */
+}
+
+#profile-pic {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+#image-upload {
+    display: none;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#shareable-link-container {
+    margin-top: 10px;
+}

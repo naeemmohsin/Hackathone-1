@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic And Editable Resume Builder</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+  <div class="topContainer">
+    <p class="Heading">Dynamic And Editable Resume Builder</p>
+    <div class="container" >
+    
+        <div class="left-panel">
+            <img src="resume-image.jpg" alt="Profile Picture" id="profile-pic">
+            <input type="file" id="image-upload" accept="image/*">
+            <div class="section" id="personal-info">
+                <h2>Personal Information <i class="fas fa-edit edit-icon" onclick="toggleEdit('personal-info')"></i></h2>
+                <div class="editable">
+                    <span contenteditable="true" data-field="name">Enter Your Complete Name</span><br>
+                    <span contenteditable="true" data-field="email">Enter Your E-mail Address</span><br>
+                    <span contenteditable="true" data-field="phone">Enter Your Phone No.</span><br>
+                    <span contenteditable="true" data-field="address">Enter Your Complete Address</span><br>
+
+                </div>
+            </div>
+            <div class="section" id="skills">
+                <h2>Skills <i class="fas fa-edit edit-icon" onclick="toggleEdit('skills')"></i></h2>
+                <div class="editable">
+                    <span contenteditable="true" data-field="skill1">Enter Your First Skill</span><br>
+                    <span contenteditable="true" data-field="skill2">Enter Your Second Skill</span><br>
+                    <span contenteditable="true" data-field="skill3">Enter Your Third Skill</span><br>
+                </div>
+            </div>
+            <div class="section" id="education">
+                <h2>Qualification <i class="fas fa-edit edit-icon" onclick="toggleEdit('education')"></i></h2>
+                <div class="editable">
+                    <div class="education-entry">
+                        <span contenteditable="true" data-field="degree">Latest Degree Name</span><br>
+                        <span contenteditable="true" data-field="university">Name of University/Board</span><br>
+                        <span contenteditable="true" data-field="graduation">Passing Year</span><br>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="right-panel">
+            <div class="section" id="experience">
+                <h2>Experience <i class="fas fa-edit edit-icon" onclick="toggleEdit('experience')"></i></h2>
+                <div class="editable">
+                    <div class="experience-entry">
+                        <span contenteditable="true" data-field="job-title">Write the Job Title</span><br>
+                        <span contenteditable="true" data-field="company">Name of Company</span><br>
+                        <span contenteditable="true" data-field="years">Years of Experience</span><br>
+                        <span contenteditable="true"
+                            data-field="description">Job Responsibilities</span><br>
+                    </div>
+                </div>
+            </div>
+            <div class="section" id="projects">
+                <h2>Projects <i class="fas fa-edit edit-icon" onclick="toggleEdit('projects')"></i></h2>
+                <div class="editable">
+                    <div class="project-entry">
+                        <span contenteditable="true" data-field="project-name">Project Name</span><br>
+                        <span contenteditable="true" data-field="project-description">Project Description</span><br>
+                    </div>
+                </div>
+            </div>
+            <div class="section" id="awards">
+                <h2>Awards and Recognitions <i class="fas fa-edit edit-icon" onclick="toggleEdit('awards')"></i></h2>
+                <div class="editable">
+                    <span contenteditable="true" data-field="award1">Details of Award-1</span><br>
+                    <span contenteditable="true" data-field="award2">Details of Award-2</span><br>
+                </div>
+            </div>
+            <button id="save-button">Save</button>
+            <button id="share-button">Get Shareable Link</button>
+            <div id="shareable-link-container" style="display: none;"></div>
+
+        </div>
+    </div>
+  </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
